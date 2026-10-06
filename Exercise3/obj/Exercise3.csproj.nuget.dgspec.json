@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY(ArrayListCollections)\\Exercise3\\Exercise3.csproj": {}
+    "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\\Exercise3\\Exercise3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY(ArrayListCollections)\\Exercise3\\Exercise3.csproj": {
+    "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\\Exercise3\\Exercise3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY(ArrayListCollections)\\Exercise3\\Exercise3.csproj",
+        "projectUniqueName": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\\Exercise3\\Exercise3.csproj",
         "projectName": "Exercise3",
-        "projectPath": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY(ArrayListCollections)\\Exercise3\\Exercise3.csproj",
+        "projectPath": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\\Exercise3\\Exercise3.csproj",
         "packagesPath": "C:\\Users\\erikm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY(ArrayListCollections)\\Exercise3\\obj\\",
+        "outputPath": "C:\\Users\\erikm\\Skola\\Kurser\\Programmering_grund\\Vecka4\\Ovningar\\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\\Exercise3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

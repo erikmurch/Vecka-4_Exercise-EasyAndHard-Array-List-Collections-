@@ -1,0 +1,15 @@
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\bin\Debug\net10.0\Exercise10_Mini-Filmregister.exe
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\bin\Debug\net10.0\Exercise10_Mini-Filmregister.deps.json
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\bin\Debug\net10.0\Exercise10_Mini-Filmregister.runtimeconfig.json
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\bin\Debug\net10.0\Exercise10_Mini-Filmregister.dll
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\bin\Debug\net10.0\Exercise10_Mini-Filmregister.pdb
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.AssemblyInfoInputs.cache
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.AssemblyInfo.cs
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.csproj.CoreCompileInputs.cache
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.sourcelink.json
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.dll
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\refint\Exercise10_Mini-Filmregister.dll
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.pdb
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\Exercise10_Mini-Filmregister.genruntimeconfig.cache
+C:\Users\erikm\Skola\Kurser\Programmering_grund\Vecka4\Ovningar\Vecka4-Ovningar-EASY&HARD(ArrayListCollections)\Exercise10_Mini-Filmregister\obj\Debug\net10.0\ref\Exercise10_Mini-Filmregister.dll

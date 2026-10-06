@@ -1,9 +1,9 @@
 ﻿// En Dictionary lagrar nycklar och värden.
 // Nyckeln är elevens namn (string).
-// Värdet är elevens betyg (int).
+// Värdet är en lista med heltal.
 // Anna och anna räknas som samma namn.
-Dictionary<string, int> students =
-    new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+Dictionary<string, List<int>> students =
+    new Dictionary<string, List<int>>(StringComparer.OrdinalIgnoreCase);
 
 // Programmet fortsätter så länge keepRunning är true.
 bool keepRunning = true;
@@ -18,7 +18,7 @@ while (keepRunning)
     Console.WriteLine("5. Avsluta");
     Console.Write("Välj ett alternativ: ");
 
-    // Läs användarens val och försök göra om det till ett heltal.
+    // Läser användarens val och försöker göra om det till ett heltal.
     if (!int.TryParse(Console.ReadLine(), out int choice))
     {
         Console.WriteLine("Ange ett nummer.");
@@ -62,7 +62,7 @@ while (keepRunning)
             }
 
             // Lägg till namnet som nyckel och betyget som värde.
-            students.Add(name, grade);
+            students.Add(name, new List<int> { grade });
 
             Console.WriteLine("Eleven och betyget har lagts till.");
             break;
@@ -89,8 +89,9 @@ while (keepRunning)
                 break;
             }
 
-            // Hitta eleven med namnet och ersätt det gamla betyget.
-            students[name] = newGrade;
+            // students[name] hämtar elevens betyglista 
+            // och .Add(newGrade) lägger till betyger utan att ta bort tidigare betyg.
+            students[name].Add(newGrade);
 
             Console.WriteLine("Betyget har uppdaterats.");
             break;
@@ -98,41 +99,48 @@ while (keepRunning)
 
         case 3:
         {
-            // Count visar hur många elever som finns.
-            if (students.Count == 0)
-            {
-                Console.WriteLine("Det finns inga elever.");
-            }
+            Console.Write("Ange elevens namn: ");
+            string name = (Console.ReadLine() ?? "").Trim();
 
-            // Gå igenom varje nyckel–värde-par i dictionaryn.
-            foreach (var elev in students)
+            // Om eleven inte finns avslutas menyvalet.
+            if (!students.ContainsKey(name))
             {
-                // Key är namnet och Value är betyget.
-                Console.WriteLine(
-                    $"Elev: {elev.Key}, betyg: {elev.Value}");
-            }
-
-            break;
-        }
-
-        case 4:
-        {
-            // Det måste finnas betyg för att beräkna ett medelvärde.
-            if (students.Count == 0)
-            {
-                Console.WriteLine("Det finns inga betyg att beräkna.");
+                Console.WriteLine("Eleven finns inte.");
                 break;
             }
 
-            // Values innehåller alla betyg.
-            // Average räknar ut medelvärdet.
-            // double används eftersom medelvärdet kan ha decimaler.
-            double averageGrade = students.Values.Average();
+            // Hämtar betygslistan för namnet användaren skrev.
+            List<int> grades = students[name];
 
-            // F2 visar medelvärdet med två decimaler.
-            Console.WriteLine($"Medelbetyget är: {averageGrade:F2}");
+            // Beräknar listans genomsnitt.
+            // double behövs eftersom svaret kan innehålla decimaler.
+            double average = grades.Average();
+
+            // Visar elevens namn och genomsnitt.
+            Console.WriteLine($"Snittbetyget för {name} är {average}");
+
             break;
-        }
+}
+
+        case 4:
+        {
+            if (students.Count == 0)
+            {
+            Console.WriteLine("Det finns inga elever.");
+            break;
+            }
+
+            foreach (var elev in students.OrderByDescending(elev => elev.Value.Average()))
+            {
+            // Beräknar genomsnittet för elevens betyg.
+            double average = elev.Value.Average();
+
+            // Visar elevens namn och genomsnitt.
+            Console.WriteLine($"{elev.Key}: {average}");
+            }
+
+         break;
+}
 
         case 5:
             // false gör att while-loopen avslutas.

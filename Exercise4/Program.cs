@@ -2,7 +2,7 @@
 // new Queue<string>() skapar en ny, tom kö.
 // FIFO = First In, First Out.
 // Den uppgift som läggs till först tas också bort först.
-Queue<string> tasks = new Queue<string>();
+List<Task> tasks = new List<Task>();
 
 // bool är en datatyp som kan vara true eller false.
 // Variabeln bestämmer om programmet ska fortsätta köras.
@@ -32,97 +32,92 @@ while (keepRunning)
     // Det case som matchar användarens val körs.
     switch (choice)
     {
-        // "1" har citationstecken eftersom choice är en string.
-        case "1":
-        {
-            Console.Write("Skriv uppgiften: ");
+    case "1":
+{
+    Console.Write("Skriv uppgiften: ");
+    string task = Console.ReadLine() ?? "";
 
-            
-            string task = (Console.ReadLine() ?? "");
+    // Kontrollerar titeln innan uppgiften sparas.
+    if (string.IsNullOrWhiteSpace(task))
+    {
+        Console.WriteLine("Uppgiften får inte vara tom.");
+        break;
+    }
 
-            // if kör sin kod om villkoret är true.
-            // IsNullOrWhiteSpace kontrollerar om texten saknas,
-            // är tom eller bara innehåller blanksteg.
-            if (string.IsNullOrWhiteSpace(task))
-            {
-                Console.WriteLine("Uppgiften får inte vara tom.");
+    // Visa frågan INNAN vi läser användarens svar.
+    Console.WriteLine("Ange prioritet: 1 = hög, 2 = medel, 3 = låg:");
 
-                // break avslutar detta switch-val.
-                // Programmet fortsätter sedan till slutet av while-loopen.
-                break;
-            }
+    // Läser svaret och försöker omvandla det till ett heltal.
+    if (!int.TryParse(Console.ReadLine(), out int enteringPriority))
+    {
+        Console.WriteLine("Prioriteten måste vara ett heltal.");
+        break;
+    }
 
-            // Enqueue lägger till uppgiften sist i kön.
-            // Befintliga uppgifter ligger fortfarande före den.
-            tasks.Enqueue(task);
+    // Skapar objektet med titeln och prioriteten.
+    Task task1 = new Task(task, enteringPriority);
 
-            // $ gör att vi kan lägga in variabler i texten med { }.
-            Console.WriteLine($"Tillagd: {task}");
-            break;
-        }
+    // Sparar objektet i listan.
+    tasks.Add(task1);
 
-        case "2":
-        {
-            // Count anger hur många uppgifter som finns i kön.
-            // == jämför två värden.
-            // Count == 0 betyder alltså att kön är tom.
-            if (tasks.Count == 0)
-            {
-                Console.WriteLine("Kön är tom.");
-                break;
-            }
+    // Bekräfta att uppgiften sparats.
+    Console.WriteLine(
+        $"Uppgiften '{task1.Title}' har lagts till med prioriteten {task1.Priority}");
 
-            // Peek returnerar den första uppgiften.
-            // Returnerar betyder att metoden ger tillbaka ett värde.
-            // Värdet sparas i variabeln nextTask.
-            // Uppgiften tas INTE bort från kön.
-            string nextTask = tasks.Peek();
+    break;
+}
 
-            Console.WriteLine($"Nästa uppgift: {nextTask}");
-            break;
-        }
 
-        case "3":
-        {
-            // Vi kontrollerar först att det finns något att ta bort.
-            // Dequeue på en tom kö skulle orsaka ett körningsfel.
-            if (tasks.Count == 0)
-            {
-                Console.WriteLine("Det finns ingen uppgift att slutföra.");
-                break;
-            }
+case "2":
+{
+    if (tasks.Count == 0)
+    {
+        Console.WriteLine("Det finns inga uppgifter.");
+        break;
+    }
 
-            // Dequeue gör två saker:
-            // 1. Tar bort den första uppgiften från kön.
-            // 2. Returnerar uppgiften som togs bort.
-            // Vi sparar den borttagna uppgiften för att kunna visa den.
-            string completedTask = tasks.Dequeue();
+    // Sortera prioritet och hämta första uppgiften.
+    Task nextTask = tasks
+        .OrderBy(currentTask => currentTask.Priority)
+        .First();
 
-            Console.WriteLine($"Slutförd: {completedTask}");
-            break;
-        }
+    Console.WriteLine($"Nästa uppgift: {nextTask.Title}");
 
-        case "4":
-        {
-            if (tasks.Count == 0)
-            {
-                Console.WriteLine("Det finns inga uppgifter kvar.");
-                break;
-            }
+    break;
+}
+case "3":
+{
+    // Kontrollera att listan innehåller någon uppgift.
+    if (tasks.Count == 0)
+    {
+        Console.WriteLine("Det finns ingen uppgift att slutföra.");
+        break;
+    }
 
-            Console.WriteLine("Återstående uppgifter:");
+    // Hitta uppgiften med lägst tal, alltså högst prioritet.
+    Task completedTask = tasks
+        .OrderBy(item => item.Priority)
+        .First();
 
-            // foreach går igenom varje uppgift i kön.
-            // Vid varje varv innehåller task nästa uppgift.
-            // Uppgifterna visas från först till sist.
-            // foreach tar inte bort något från kön.
-            foreach (string task in tasks)
-            {
-                Console.WriteLine($"- {task}");
-            }
+    // Ta bort den valda uppgiften från listan.
+    tasks.Remove(completedTask);
 
-            break;
-        }
+    // Visa titeln på uppgiften som slutfördes.
+    Console.WriteLine($"Slutförd: {completedTask.Title}");
+
+    break;
+}
+
+case "4":
+{
+    foreach (Task currentTask in tasks.OrderBy(item => item.Priority))
+    {
+        Console.WriteLine(
+            $"{currentTask.Title} – prioritet {currentTask.Priority}");
+    }
+
+    break;
+}
 
         case "5":
             // = tilldelar ett värde till en variabel.

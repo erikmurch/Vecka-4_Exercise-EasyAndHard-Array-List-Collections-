@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Exercise9_Historik&Angra-funktion/1.0.0": {
+        "runtime": {
+          "Exercise9_Historik&Angra-funktion.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercise9_Historik&Angra-funktion/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
